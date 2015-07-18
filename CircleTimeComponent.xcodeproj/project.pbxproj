@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		16065EB71B539BD700B42D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065EB61B539BD700B42D93 /* AppDelegate.swift */; };
+		16065EB91B539BD700B42D93 /* CircleTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */; };
+		16065EBC1B539BD700B42D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBA1B539BD700B42D93 /* Main.storyboard */; };
+		16065EBE1B539BD700B42D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBD1B539BD700B42D93 /* Images.xcassets */; };
+		16065EC11B539BD700B42D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBF1B539BD700B42D93 /* LaunchScreen.xib */; };
+		16065ECD1B539BD700B42D93 /* CircleTimeComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */; };
+		1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657DD241B589A1E00D0A40F /* ExampleViewController.swift */; };
+		1657DD291B58F16700D0A40F /* PercentCircleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657DD281B58F16700D0A40F /* PercentCircleTime.swift */; };
+		16F8FB2D1B53A47700BBAFE8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */; };
+		16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */; };
+		16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		16065EC71B539BD700B42D93 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 16065EA91B539BD700B42D93 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16065EB01B539BD700B42D93;
+			remoteInfo = CircleTimeComponent;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		16065EB11B539BD700B42D93 /* CircleTimeComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimeComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		16065EB51B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16065EB61B539BD700B42D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeViewController.swift; sourceTree = "<group>"; };
+		16065EBB1B539BD700B42D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		16065EBD1B539BD700B42D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		16065EC01B539BD700B42D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		16065EC61B539BD700B42D93 /* CircleTimeComponentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircleTimeComponentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		16065ECB1B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeComponentTests.swift; sourceTree = "<group>"; };
+		1657DD241B589A1E00D0A40F /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		1657DD281B58F16700D0A40F /* PercentCircleTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentCircleTime.swift; sourceTree = "<group>"; };
+		16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexes.swift; sourceTree = "<group>"; };
+		16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		16065EAE1B539BD700B42D93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16065EC31B539BD700B42D93 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		16065EA81B539BD700B42D93 = {
+			isa = PBXGroup;
+			children = (
+				16065EB31B539BD700B42D93 /* CircleTimeComponent */,
+				16065EC91B539BD700B42D93 /* CircleTimeComponentTests */,
+				16065EB21B539BD700B42D93 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		16065EB21B539BD700B42D93 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				16065EB11B539BD700B42D93 /* CircleTimeComponent.app */,
+				16065EC61B539BD700B42D93 /* CircleTimeComponentTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		16065EB31B539BD700B42D93 /* CircleTimeComponent */ = {
+			isa = PBXGroup;
+			children = (
+				16F8FB2B1B53A44F00BBAFE8 /* CircleView */,
+				16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */,
+				16065EBA1B539BD700B42D93 /* Main.storyboard */,
+				16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */,
+				1657DD241B589A1E00D0A40F /* ExampleViewController.swift */,
+				16065EBD1B539BD700B42D93 /* Images.xcassets */,
+				16065EBF1B539BD700B42D93 /* LaunchScreen.xib */,
+				16065EB41B539BD700B42D93 /* Supporting Files */,
+			);
+			path = CircleTimeComponent;
+			sourceTree = "<group>";
+		};
+		16065EB41B539BD700B42D93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16065EB51B539BD700B42D93 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16065EC91B539BD700B42D93 /* CircleTimeComponentTests */ = {
+			isa = PBXGroup;
+			children = (
+				16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */,
+				16065ECA1B539BD700B42D93 /* Supporting Files */,
+			);
+			path = CircleTimeComponentTests;
+			sourceTree = "<group>";
+		};
+		16065ECA1B539BD700B42D93 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				16065ECB1B539BD700B42D93 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		16F8FB2B1B53A44F00BBAFE8 /* CircleView */ = {
+			isa = PBXGroup;
+			children = (
+				16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */,
+				16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */,
+				16065EB61B539BD700B42D93 /* AppDelegate.swift */,
+				1657DD281B58F16700D0A40F /* PercentCircleTime.swift */,
+			);
+			name = CircleView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16065EB01B539BD700B42D93 /* CircleTimeComponent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16065ED01B539BD700B42D93 /* Build configuration list for PBXNativeTarget "CircleTimeComponent" */;
+			buildPhases = (
+				16065EAD1B539BD700B42D93 /* Sources */,
+				16065EAE1B539BD700B42D93 /* Frameworks */,
+				16065EAF1B539BD700B42D93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CircleTimeComponent;
+			productName = CircleTimeComponent;
+			productReference = 16065EB11B539BD700B42D93 /* CircleTimeComponent.app */;
+			productType = "com.apple.product-type.application";
+		};
+		16065EC51B539BD700B42D93 /* CircleTimeComponentTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 16065ED31B539BD700B42D93 /* Build configuration list for PBXNativeTarget "CircleTimeComponentTests" */;
+			buildPhases = (
+				16065EC21B539BD700B42D93 /* Sources */,
+				16065EC31B539BD700B42D93 /* Frameworks */,
+				16065EC41B539BD700B42D93 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				16065EC81B539BD700B42D93 /* PBXTargetDependency */,
+			);
+			name = CircleTimeComponentTests;
+			productName = CircleTimeComponentTests;
+			productReference = 16065EC61B539BD700B42D93 /* CircleTimeComponentTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		16065EA91B539BD700B42D93 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = thienle;
+				TargetAttributes = {
+					16065EB01B539BD700B42D93 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					16065EC51B539BD700B42D93 = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = 16065EB01B539BD700B42D93;
+					};
+				};
+			};
+			buildConfigurationList = 16065EAC1B539BD700B42D93 /* Build configuration list for PBXProject "CircleTimeComponent" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 16065EA81B539BD700B42D93;
+			productRefGroup = 16065EB21B539BD700B42D93 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				16065EB01B539BD700B42D93 /* CircleTimeComponent */,
+				16065EC51B539BD700B42D93 /* CircleTimeComponentTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		16065EAF1B539BD700B42D93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16065EBC1B539BD700B42D93 /* Main.storyboard in Resources */,
+				16065EC11B539BD700B42D93 /* LaunchScreen.xib in Resources */,
+				16065EBE1B539BD700B42D93 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16065EC41B539BD700B42D93 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		16065EAD1B539BD700B42D93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */,
+				16F8FB2D1B53A47700BBAFE8 /* CircleView.swift in Sources */,
+				16065EB91B539BD700B42D93 /* CircleTimeViewController.swift in Sources */,
+				16065EB71B539BD700B42D93 /* AppDelegate.swift in Sources */,
+				1657DD291B58F16700D0A40F /* PercentCircleTime.swift in Sources */,
+				16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */,
+				1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		16065EC21B539BD700B42D93 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16065ECD1B539BD700B42D93 /* CircleTimeComponentTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		16065EC81B539BD700B42D93 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16065EB01B539BD700B42D93 /* CircleTimeComponent */;
+			targetProxy = 16065EC71B539BD700B42D93 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		16065EBA1B539BD700B42D93 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16065EBB1B539BD700B42D93 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		16065EBF1B539BD700B42D93 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				16065EC01B539BD700B42D93 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		16065ECE1B539BD700B42D93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		16065ECF1B539BD700B42D93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		16065ED11B539BD700B42D93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CircleTimeComponent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		16065ED21B539BD700B42D93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = CircleTimeComponent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		16065ED41B539BD700B42D93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CircleTimeComponentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircleTimeComponent.app/CircleTimeComponent";
+			};
+			name = Debug;
+		};
+		16065ED51B539BD700B42D93 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CircleTimeComponentTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CircleTimeComponent.app/CircleTimeComponent";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		16065EAC1B539BD700B42D93 /* Build configuration list for PBXProject "CircleTimeComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16065ECE1B539BD700B42D93 /* Debug */,
+				16065ECF1B539BD700B42D93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16065ED01B539BD700B42D93 /* Build configuration list for PBXNativeTarget "CircleTimeComponent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16065ED11B539BD700B42D93 /* Debug */,
+				16065ED21B539BD700B42D93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		16065ED31B539BD700B42D93 /* Build configuration list for PBXNativeTarget "CircleTimeComponentTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				16065ED41B539BD700B42D93 /* Debug */,
+				16065ED51B539BD700B42D93 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 16065EA91B539BD700B42D93 /* Project object */;
+}
