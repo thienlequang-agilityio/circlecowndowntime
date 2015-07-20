@@ -26,7 +26,7 @@ Choice typeRaw = 0 or set in code:
 
         days.typeRaw = 0
 
-And you should set countdownTime for view
+And you should set countdownTime in second for view
 
         countdownTime = (24 * 3600) + 60 + 12
 
