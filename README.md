@@ -24,7 +24,7 @@ Choice typeRaw = 1 or set in code:
 ### Day view:
 Choice typeRaw = 0 or set in code:  
 
-        days.typeRaw = 1   
+        days.typeRaw = 0
 
 And you should set countdownTime for view
 
