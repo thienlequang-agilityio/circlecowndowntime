@@ -26,9 +26,9 @@ class ExampleViewController: UIViewController {
   }
   override func viewDidLoad() {
     super.viewDidLoad()
-    println("ViewDidLoad")
+
     countdownTime = (24 * 3600) + 60 + 12
-    
+
     secondsView.countdownSeconnd = countdownTime
     minutesView.countdownMinute = Float(countdownTime) / 60.0
     hoursView.countdownHour = Float(countdownTime) / 3600.0

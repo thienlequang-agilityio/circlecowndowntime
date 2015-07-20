@@ -111,7 +111,7 @@ public class CustomCircleView: UIView {
   // MARK: - Method
   // Draw a partial circle
   public func animateCircleTo(duration: NSTimeInterval, fromValue: CGFloat, toValue:CGFloat) {
-    println("draw")
+
     // We want to animate the strokeEnd property of the circleLayer
     let animation = CABasicAnimation(keyPath: "strokeEnd")
     
@@ -189,8 +189,6 @@ public class CustomCircleView: UIView {
   //-------------------------Minute Circle-----------------------------//
   public func drawMinuteCircle() {
     var remindMinute = (countdownMinute % 60)
-    println("REmind minute \(remindMinute)")
-        println("countdownMinute \(countdownMinute)")
     let circleRound = Int(countdownMinute / 60) - 1
 
     self.animateCircleTo(NSTimeInterval(remindMinute * 60), fromValue: CGFloat(60 - remindMinute) / 60 , toValue: 1.0)
@@ -205,7 +203,6 @@ public class CustomCircleView: UIView {
     if Int(countdownMinute) > 0 {
       for i in 0...Int(countdownMinute - 1) {
         var time = i * 60 + Int((remindMinute - Float(Int(remindMinute))) * 60)
-        println("time: \(time)")
 
         NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showMinuteLabel"), userInfo: nil, repeats: false)
       }
