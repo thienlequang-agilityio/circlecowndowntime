@@ -33,7 +33,7 @@
 /* Begin PBXFileReference section */
 		16065EB11B539BD700B42D93 /* CircleTimeComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimeComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16065EB51B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		16065EB61B539BD700B42D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		16065EB61B539BD700B42D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 1; };
 		16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeViewController.swift; sourceTree = "<group>"; };
 		16065EBB1B539BD700B42D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16065EBD1B539BD700B42D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };

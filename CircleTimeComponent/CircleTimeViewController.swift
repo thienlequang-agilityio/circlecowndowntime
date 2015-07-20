@@ -46,7 +46,7 @@ class CircleTimeViewController: UIViewController {
     
 //    DaysView.layoutIfNeeded()
 //    testView.startDate = "2015-07-25:20:20:00"
-    testView.endDate = "2015-07-17:09:30:00"
+//    testView.endDate = "2015-07-17:09:30:00"
 //    testView.currentTime = NSDate()
     secondsView.backgroundColor = UIColor.clearColor()
     MinutesView.backgroundColor = UIColor.clearColor()

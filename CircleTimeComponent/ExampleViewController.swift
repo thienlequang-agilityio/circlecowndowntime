@@ -15,7 +15,7 @@ class ExampleViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    secondsView.endDate = "2015-07-17:09:22:00"
+//    secondsView.endDate = "2015-07-17:09:22:00"
     
   }
   
