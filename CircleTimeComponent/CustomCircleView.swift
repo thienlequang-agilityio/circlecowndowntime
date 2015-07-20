@@ -10,10 +10,14 @@ public class CustomCircleView: UIView {
   
   // MARK: - Property
 
-  public var countdownSeconnd:Int =  3600 * 12 + 9 * 60 + 30
-  public var countdownMinute:Float = Float(3600 * 12 + 9 * 60 + 30) / 60.0
-  public var countdownHour:Float = Float(3600 * 12 + 9 * 60 + 30) / 3600.0
-  public var countdownDay:Float = Float(3600 * 12 + 9 * 60 + 30) / (24.0 * 3600.0)
+//  public var countdownSeconnd:Int =  3600 * 12 + 9 * 60 + 30
+//  public var countdownMinute:Float = Float(3600 * 12 + 9 * 60 + 30) / 60.0
+//  public var countdownHour:Float = Float(3600 * 12 + 9 * 60 + 30) / 3600.0
+//  public var countdownDay:Float = Float(3600 * 12 + 9 * 60 + 30) / (24.0 * 3600.0)
+  public var countdownSeconnd:Int =  5
+  public var countdownMinute:Float = 0.0
+  public var countdownHour:Float = 0.0
+  public var countdownDay:Float = 0.0
   public var dayBetweenStartTimeAndEndTime:Float = 10.0 // TODO
   
   @IBInspectable var typeRaw: Int = 0 {
@@ -34,9 +38,6 @@ public class CustomCircleView: UIView {
   
   @IBInspectable var lineWidth: CGFloat = 3.0
 
-
-  
-  
   public var label = UILabel()
   
   
@@ -158,7 +159,7 @@ public class CustomCircleView: UIView {
     let delay = Double(seconds) * Double(NSEC_PER_SEC)
     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
     dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-      self.timer.invalidate()
+//      self.timer.invalidate()
       if circleRound > 0 {
         for i in 0...circleRound {
           NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(60 * i), target: self, selector: Selector("drawTotalSecondCircle"), userInfo: nil, repeats: false)
@@ -168,8 +169,18 @@ public class CustomCircleView: UIView {
   }
   
   public func remaindSecond() {
-    countdownSeconnd -= 1
-    label.text = "\(countdownSeconnd % 60)"
+    if countdownSeconnd > 0 {
+      countdownSeconnd -= 1
+      if countdownSeconnd % 60 < 10 {
+        label.text = "0\(countdownSeconnd % 60)"
+      } else  {
+        label.text = "\(countdownSeconnd % 60)"
+      }
+      
+    } else {
+      label.text = "00"
+    }
+    
     
   }
   
@@ -209,13 +220,21 @@ public class CustomCircleView: UIView {
 
   }
   func showMinuteLabel() {
-
-    var labelText = Int(countdownMinute) % 60
-    if labelText == 0 {
-      labelText = 60
+    if countdownMinute > 0 {
+      var labelText = Int(countdownMinute) % 60
+      if labelText == 0 {
+        labelText = 60
+      }
+      if labelText - 1 < 10 {
+        label.text = "0\(labelText - 1)"
+      } else {
+        label.text = "\(labelText - 1)"
+      }
+      
+      countdownMinute -= 1
+    } else {
+      label.text = "00"
     }
-    label.text = "\(labelText - 1)"
-    countdownMinute -= 1
   }
   public func drawTotalMinuteCircle() {
     _circleLayer.strokeEnd = 0
@@ -252,13 +271,23 @@ public class CustomCircleView: UIView {
   }
   
   func showHourLabel() {
-    var labelText = Int(countdownHour) % 24
-    if labelText == 0 {
-      labelText = 24
+    if countdownHour > 0 {
+      var labelText = Int(countdownHour) % 24
+      if labelText == 0 {
+        labelText = 24
+      }
+      if labelText - 1 < 10 {
+        label.text = "0\(labelText - 1)"
+      } else {
+        label.text = "\(labelText - 1)"
+      }
+      
+      
+      countdownHour -= 1
+    } else {
+      label.text = "00"
     }
-    label.text = "\(labelText - 1)"
     
-    countdownMinute -= 1
   }
   
   public func drawTotalHourCircle() {
@@ -297,9 +326,18 @@ public class CustomCircleView: UIView {
   
   
   func showDayLabel() {
-    var labelText = Int(countdownDay)
-    label.text = "\(labelText - 1)"
-    countdownDay -= 1
+    if countdownDay > 0 {
+      var labelText = Int(countdownDay)
+      if labelText - 1 < 10 {
+        label.text = "0\(labelText - 1)"
+      } else {
+        label.text = "\(labelText - 1)"
+      }
+      
+      countdownDay -= 1
+    } else {
+      label.text = "00"
+    }
   }
   
   func drawTotalDayCircle() {

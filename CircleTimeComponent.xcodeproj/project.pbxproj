@@ -8,14 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		16065EB71B539BD700B42D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065EB61B539BD700B42D93 /* AppDelegate.swift */; };
-		16065EB91B539BD700B42D93 /* CircleTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */; };
 		16065EBC1B539BD700B42D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBA1B539BD700B42D93 /* Main.storyboard */; };
 		16065EBE1B539BD700B42D93 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBD1B539BD700B42D93 /* Images.xcassets */; };
 		16065EC11B539BD700B42D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBF1B539BD700B42D93 /* LaunchScreen.xib */; };
 		16065ECD1B539BD700B42D93 /* CircleTimeComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */; };
 		1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657DD241B589A1E00D0A40F /* ExampleViewController.swift */; };
-		1657DD291B58F16700D0A40F /* PercentCircleTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657DD281B58F16700D0A40F /* PercentCircleTime.swift */; };
-		16F8FB2D1B53A47700BBAFE8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */; };
 		16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */; };
 		16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */; };
 /* End PBXBuildFile section */
@@ -34,7 +31,6 @@
 		16065EB11B539BD700B42D93 /* CircleTimeComponent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircleTimeComponent.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16065EB51B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16065EB61B539BD700B42D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; tabWidth = 1; };
-		16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeViewController.swift; sourceTree = "<group>"; };
 		16065EBB1B539BD700B42D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		16065EBD1B539BD700B42D93 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		16065EC01B539BD700B42D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -42,8 +38,6 @@
 		16065ECB1B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeComponentTests.swift; sourceTree = "<group>"; };
 		1657DD241B589A1E00D0A40F /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		1657DD281B58F16700D0A40F /* PercentCircleTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentCircleTime.swift; sourceTree = "<group>"; };
-		16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexes.swift; sourceTree = "<group>"; };
 		16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,7 +82,6 @@
 			isa = PBXGroup;
 			children = (
 				16F8FB2B1B53A44F00BBAFE8 /* CircleView */,
-				16065EB81B539BD700B42D93 /* CircleTimeViewController.swift */,
 				16065EBA1B539BD700B42D93 /* Main.storyboard */,
 				16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */,
 				1657DD241B589A1E00D0A40F /* ExampleViewController.swift */,
@@ -127,10 +120,8 @@
 		16F8FB2B1B53A44F00BBAFE8 /* CircleView */ = {
 			isa = PBXGroup;
 			children = (
-				16F8FB2C1B53A47700BBAFE8 /* CircleView.swift */,
 				16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */,
 				16065EB61B539BD700B42D93 /* AppDelegate.swift */,
-				1657DD281B58F16700D0A40F /* PercentCircleTime.swift */,
 			);
 			name = CircleView;
 			sourceTree = "<group>";
@@ -236,10 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */,
-				16F8FB2D1B53A47700BBAFE8 /* CircleView.swift in Sources */,
-				16065EB91B539BD700B42D93 /* CircleTimeViewController.swift in Sources */,
 				16065EB71B539BD700B42D93 /* AppDelegate.swift in Sources */,
-				1657DD291B58F16700D0A40F /* PercentCircleTime.swift in Sources */,
 				16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */,
 				1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */,
 			);
