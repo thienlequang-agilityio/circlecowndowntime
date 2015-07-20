@@ -13,7 +13,6 @@
 		16065EC11B539BD700B42D93 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 16065EBF1B539BD700B42D93 /* LaunchScreen.xib */; };
 		16065ECD1B539BD700B42D93 /* CircleTimeComponentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */; };
 		1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1657DD241B589A1E00D0A40F /* ExampleViewController.swift */; };
-		16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */; };
 		16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +37,6 @@
 		16065ECB1B539BD700B42D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		16065ECC1B539BD700B42D93 /* CircleTimeComponentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleTimeComponentTests.swift; sourceTree = "<group>"; };
 		1657DD241B589A1E00D0A40F /* ExampleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
-		16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexes.swift; sourceTree = "<group>"; };
 		16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,7 +81,7 @@
 			children = (
 				16F8FB2B1B53A44F00BBAFE8 /* CircleView */,
 				16065EBA1B539BD700B42D93 /* Main.storyboard */,
-				16F8FB2E1B53AACC00BBAFE8 /* hexes.swift */,
+				16065EB61B539BD700B42D93 /* AppDelegate.swift */,
 				1657DD241B589A1E00D0A40F /* ExampleViewController.swift */,
 				16065EBD1B539BD700B42D93 /* Images.xcassets */,
 				16065EBF1B539BD700B42D93 /* LaunchScreen.xib */,
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				16F8FB301B54BC3200BBAFE8 /* CustomCircleView.swift */,
-				16065EB61B539BD700B42D93 /* AppDelegate.swift */,
 			);
 			name = CircleView;
 			sourceTree = "<group>";
@@ -228,7 +225,6 @@
 			files = (
 				16F8FB311B54BC3200BBAFE8 /* CustomCircleView.swift in Sources */,
 				16065EB71B539BD700B42D93 /* AppDelegate.swift in Sources */,
-				16F8FB2F1B53AACC00BBAFE8 /* hexes.swift in Sources */,
 				1657DD251B589A1E00D0A40F /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

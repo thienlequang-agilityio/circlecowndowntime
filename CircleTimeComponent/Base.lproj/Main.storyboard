@@ -196,6 +196,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="daysView" destination="sAQ-CN-HYg" id="klu-AY-lmh"/>
+                        <outlet property="hoursView" destination="d1Z-Kl-gMw" id="tGp-9z-vVV"/>
+                        <outlet property="minutesView" destination="kam-Yh-cCY" id="m3v-sb-gDN"/>
                         <outlet property="secondsView" destination="Yu7-bP-FuY" id="Sw1-9h-eHY"/>
                     </connections>
                 </viewController>

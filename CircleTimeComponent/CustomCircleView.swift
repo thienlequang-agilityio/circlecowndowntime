@@ -9,16 +9,11 @@ public class CustomCircleView: UIView {
   }
   
   // MARK: - Property
-
-//  public var countdownSeconnd:Int =  3600 * 12 + 9 * 60 + 30
-//  public var countdownMinute:Float = Float(3600 * 12 + 9 * 60 + 30) / 60.0
-//  public var countdownHour:Float = Float(3600 * 12 + 9 * 60 + 30) / 3600.0
-//  public var countdownDay:Float = Float(3600 * 12 + 9 * 60 + 30) / (24.0 * 3600.0)
-  public var countdownSeconnd:Int =  5
+  public var countdownSeconnd:Int =  0
   public var countdownMinute:Float = 0.0
   public var countdownHour:Float = 0.0
   public var countdownDay:Float = 0.0
-  public var dayBetweenStartTimeAndEndTime:Float = 10.0 // TODO
+  public var dayBetweenStartTimeAndEndTime:Float = 10.0
   
   @IBInspectable var typeRaw: Int = 0 {
     didSet {
@@ -39,12 +34,6 @@ public class CustomCircleView: UIView {
   @IBInspectable var lineWidth: CGFloat = 3.0
 
   public var label = UILabel()
-  
-  
-  var timer = NSTimer()
-  var minuteTimer = NSTimer()
-  
-//  var flag = true
   
   public var viewType: ViewType  = .Secs {
     didSet {
@@ -81,7 +70,6 @@ public class CustomCircleView: UIView {
     }()
   
   // MARK: - initialize
-  
   public convenience init(frame: CGRect, viewType: ViewType, viewColor: UIColor, strokeEnd: CGFloat) {
     self.init(frame: frame)
     self.viewType = viewType
@@ -105,6 +93,7 @@ public class CustomCircleView: UIView {
     
     if _circleLayer.superlayer != layer {
       layer.addSublayer(_circleLayer)
+      self.addSubview(label)
       switch viewType {
       case .Secs:
         self.drawSecondsCircle()
@@ -115,13 +104,14 @@ public class CustomCircleView: UIView {
       case .Days:
         self.drawDayCircle()
       }
-      self.addSubview(label)
+      
     }
   }
   
   // MARK: - Method
   // Draw a partial circle
   public func animateCircleTo(duration: NSTimeInterval, fromValue: CGFloat, toValue:CGFloat) {
+    println("draw")
     // We want to animate the strokeEnd property of the circleLayer
     let animation = CABasicAnimation(keyPath: "strokeEnd")
     
@@ -142,26 +132,30 @@ public class CustomCircleView: UIView {
     _circleLayer.addAnimation(animation, forKey: "animateCircle")
 
   }
-
+  func setLabelPosition() {
+    label.frame = CGRectMake(0, self.frame.height / 2 - 10 , self.frame.width, 20)
+    label.textAlignment = NSTextAlignment.Center
+  }
 
   //-------------------------Second Circle-----------------------------//
   public func drawSecondsCircle() {
+
     let seconds = (countdownSeconnd % 60)
     let circleRound = Int(countdownSeconnd / 60)
-
-    self.animateCircleTo(NSTimeInterval(seconds), fromValue: CGFloat(60 - seconds) / 60, toValue: 1.0)
-    label.frame = CGRectMake(0, self.frame.height / 2 - 10 , self.frame.width, 20)
-    label.textAlignment = NSTextAlignment.Center
+    if seconds > 0 {
+      self.animateCircleTo(NSTimeInterval(seconds), fromValue: CGFloat(60 - seconds) / 60, toValue: 1.0)
+    }
+    
+    self.setLabelPosition()
     for i in 0...(countdownSeconnd) {
-      timer = NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(i), target: self, selector: Selector("remaindSecond"), userInfo: nil, repeats: false)
+      NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(i), target: self, selector: Selector("remaindSecond"), userInfo: nil, repeats: false)
     }
 
     let delay = Double(seconds) * Double(NSEC_PER_SEC)
     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
     dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-//      self.timer.invalidate()
       if circleRound > 0 {
-        for i in 0...circleRound {
+        for i in 0...(circleRound - 1) {
           NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(60 * i), target: self, selector: Selector("drawTotalSecondCircle"), userInfo: nil, repeats: false)
         }
       }
@@ -169,18 +163,19 @@ public class CustomCircleView: UIView {
   }
   
   public func remaindSecond() {
+    
     if countdownSeconnd > 0 {
-      countdownSeconnd -= 1
+      
       if countdownSeconnd % 60 < 10 {
+        
         label.text = "0\(countdownSeconnd % 60)"
       } else  {
         label.text = "\(countdownSeconnd % 60)"
       }
-      
     } else {
       label.text = "00"
     }
-    
+    countdownSeconnd -= 1
     
   }
   
@@ -193,20 +188,27 @@ public class CustomCircleView: UIView {
 
   //-------------------------Minute Circle-----------------------------//
   public func drawMinuteCircle() {
-    println("countdownMinute \(countdownMinute)")
     var remindMinute = (countdownMinute % 60)
-    
+    println("REmind minute \(remindMinute)")
+        println("countdownMinute \(countdownMinute)")
     let circleRound = Int(countdownMinute / 60) - 1
 
     self.animateCircleTo(NSTimeInterval(remindMinute * 60), fromValue: CGFloat(60 - remindMinute) / 60 , toValue: 1.0)
-    label.frame = CGRectMake(0, self.frame.height / 2 - 10 , self.frame.width, 20)
-    label.textAlignment = NSTextAlignment.Center
+    self.setLabelPosition()
     
-    label.text = "\(Int(remindMinute))"
-    for i in 0...Int(countdownMinute) {
-      var time = i * 60 + Int((remindMinute - Float(Int(remindMinute))) * 60)
+    if (Int(remindMinute) >= 10) {
+      label.text = "\(Int(remindMinute))"
+    } else {
+      label.text = "0\(Int(remindMinute))"
+    }
 
-      NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showMinuteLabel"), userInfo: nil, repeats: false)
+    if Int(countdownMinute) > 0 {
+      for i in 0...Int(countdownMinute - 1) {
+        var time = i * 60 + Int((remindMinute - Float(Int(remindMinute))) * 60)
+        println("time: \(time)")
+
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showMinuteLabel"), userInfo: nil, repeats: false)
+      }
     }
     let delay = Double(remindMinute * 60) * Double(NSEC_PER_SEC)
     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -249,14 +251,21 @@ public class CustomCircleView: UIView {
     let circleRound = Int(countdownHour / 24) - 1
     
     self.animateCircleTo(NSTimeInterval(remindHours * 60 * 60), fromValue: CGFloat(24 - remindHours) / 24.0 , toValue: 1.0)
-    label.frame = CGRectMake(0, self.frame.height / 2 - 10 , self.frame.width, 20)
-    label.textAlignment = NSTextAlignment.Center
     
-    label.text = "\(Int(remindHours))"
-    for i in 0...Int(countdownHour) {
-      var time = i * 60 * 60 + Int((remindHours - Float(Int(remindHours))) * 60 * 60)
-      
-      NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showHourLabel"), userInfo: nil, repeats: false)
+    self.setLabelPosition()
+    
+    if Int(remindHours) >= 10 {
+      label.text = "\(Int(remindHours))"
+    } else {
+      label.text = "0\(Int(remindHours))"
+    }
+    
+    if Int(countdownHour) > 0 {
+      for i in 0...Int(countdownHour - 1) {
+        var time = i * 60 * 60 + Int((remindHours - Float(Int(remindHours))) * 60 * 60)
+        
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showHourLabel"), userInfo: nil, repeats: false)
+      }
     }
     let delay = Double(remindHours * 60 * 60) * Double(NSEC_PER_SEC)
     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
@@ -297,22 +306,26 @@ public class CustomCircleView: UIView {
   
   //-------------------------Day Circle-----------------------------//
   public func drawDayCircle() {
-
-    var dayBetweenCurrentTimeToEndTime = countdownDay - Float(Int(countdownDay))
-    let circleRound = Int(countdownHour / dayBetweenStartTimeAndEndTime) - 1
+    let circleRound = Int(countdownDay / dayBetweenStartTimeAndEndTime) - 1
     
-    self.animateCircleTo(NSTimeInterval(dayBetweenCurrentTimeToEndTime * 24 * 60 * 60), fromValue: CGFloat((dayBetweenStartTimeAndEndTime - dayBetweenCurrentTimeToEndTime) / dayBetweenStartTimeAndEndTime), toValue: 1.0)
+    self.animateCircleTo(NSTimeInterval(countdownDay * 24 * 60 * 60), fromValue: CGFloat((dayBetweenStartTimeAndEndTime - countdownDay) / dayBetweenStartTimeAndEndTime), toValue: 1.0)
     
-    label.frame = CGRectMake(0, self.frame.height / 2 - 10 , self.frame.width, 20)
-    label.textAlignment = NSTextAlignment.Center
-    
-    label.text = "\(Int(countdownDay))"
-    for i in 0...Int(countdownDay) {
-      var time = i * 60 * 60 * 24 + Int((dayBetweenCurrentTimeToEndTime - Float(Int(dayBetweenCurrentTimeToEndTime))) * 60 * 60)
-      
-      NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showDayLabel"), userInfo: nil, repeats: false)
+    self.setLabelPosition()
+    if Int(countdownDay) >= 10 {
+      label.text = "\(Int(countdownDay))"
+    } else {
+      label.text = "0\(Int(countdownDay))"
     }
-    let delay = Double(dayBetweenCurrentTimeToEndTime * 60 * 60 * 24) * Double(NSEC_PER_SEC)
+    
+    if Int(countdownDay) > 0 {
+      for i in 0...Int(countdownDay) {
+        var time = i * 60 * 60 * 24 + Int((countdownDay - Float(Int(countdownDay))) * 60 * 60 * 24)
+        
+        NSTimer.scheduledTimerWithTimeInterval(NSTimeInterval(time), target: self, selector: Selector("showDayLabel"), userInfo: nil, repeats: false)
+      }
+    }
+    
+    let delay = Double(countdownDay * 60 * 60 * 24) * Double(NSEC_PER_SEC)
     var dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
     
     dispatch_after(dispatchTime, dispatch_get_main_queue(), {
